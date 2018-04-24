@@ -1,0 +1,19 @@
+// 1. Create a collection named orders
+
+db.createCollection('orders')
+
+// 2. Insert at least 3 documents that represent an order
+
+db.orders.insert({orderDate: new Date('2017-02-03'), orderTotal: 900.0, lineItems: [{unitPrice: 300.0, quantity: 3, productName: "Desk Chair"}]})
+db.orders.insert({orderDate: new Date('2017-04-04'), orderTotal: 450.0, lineItems: [{unitPrice: 125.0, quantity: 4, productName: "Memory Foam Cushion"}]})
+db.orders.insert({orderDate: new Date('2017-01-02'), orderTotal: 1000.0, lineItems: [{unitPrice: 1000.0, quantity: 1, productName: "Table"}]})
+
+// 3. Find all orders and make them look pretty
+
+db.orders.find().pretty()
+
+// 4. Find all orders with an orderDate that is after 1/31/2017
+
+
+
+// 5. Change the orderTotal from 2/3/2017 to 63 dollars
